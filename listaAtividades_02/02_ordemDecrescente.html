@@ -1,0 +1,48 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia três números e mostre-os em ordem decrescente.
+    */
+
+    //ENTRADA
+    const num1 = Number(prompt(`Insira um numero`).trim())
+    const num2 = Number(prompt(`Insira outro numero`).trim())
+    const num3 = Number(prompt(`Insira mais um numero`).trim())
+    
+    //PROCESSAMENTO
+   if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)){
+    if(num1 == num2 || num1 == num3 || num2 == num3 || num3 == num2){
+        alert(`Existem numeros iguais`)
+    } 
+    else{  if  (num1 > num2 && num2 > num3){
+        alert(`Numeros em ordem decresente são: ${num1}, ${num2}, ${num3}`)
+    }
+    else if (num2 > num1 && num1 > num3){
+        alert(`Numeros em ordem decrescente são: ${num2}, ${num1}, ${num3}`)
+    }
+    else if (num3 > num1 && num1 > num2){
+        alert(`Numeros em ordem decrescente são: ${num3}, ${num1}, ${num2}`) 
+   }
+    else if (num2 > num3 && num3 > num1){
+        alert(`Numeros em ordem decrescente são: ${num2}, ${num3}, ${num1}`)
+   } 
+    else if (num1 > num3 && num3 > num2){
+        alert(`Numeros em ordem decrescente são: ${num1}, ${num3}, ${num2}`)
+   }   
+    else if (num3 > num2 && num2 > num1){
+        alert(`Numeros em ordem decrescente são: ${num3}, ${num2}, ${num1}`)
+
+} 
+    
+    
+    
+    
+       
+}
+
+}
+
+
+    //SAÍDA
+    
+</script>

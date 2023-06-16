@@ -1,0 +1,65 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+
+    const num1 = Number(prompt(`Insira um número:`).replace(",", ".").trim());
+    const num2 = Number(prompt(`Insira um outro número:`).replace(",", ".").trim());
+    const operacao = prompt(`Insira a operação que você quer realizar(+, -, / ou *)`).trim();
+
+    //PROCESSAMENTO
+
+    if (isNaN(num1) || isNaN(num2) || !isNaN(operacao)) {
+        alert(`Insira uma resposta válida!`);
+    }
+    else {
+        if (operacao === "+") {
+
+            const conta = num1 + num2;
+            const parImpar = ((conta) % 2) == 0 ? "par" : "ímpar";
+            const sinal = Math.sign(conta) == 1 ? "positivo" : Math.sign(conta) == -1 ? "negativo" : "zero";
+            const inteiroDecimal = Number.isInteger(conta) ? "inteiro" : "decimal";
+
+            alert(`O resultado é ${conta.toFixed(2).replace(".", ",")}, esse número é ${parImpar}, ${sinal} e ${inteiroDecimal}.`);
+        }
+        else if (operacao === "-") {
+
+            const conta = num1 - num2;
+            const parImpar = (conta % 2) == 0 ? "par" : "ímpar";
+            const sinal = Math.sign(conta) == 1 ? "positivo" : Math.sign(conta) == -1 ? "negativo" : "zero";
+            const inteiroDecimal = Number.isInteger(conta) ? "inteiro" : "decimal";
+
+            alert(`O resultado é ${conta.toFixed(2).replace(".", ",")}, esse número é ${parImpar}, ${sinal} e ${inteiroDecimal}.`);
+        }
+        else if (operacao === "/") {
+
+            const conta = num1 / num2;
+            const parImpar = (conta % 2) == 0 ? "par" : "ímpar";
+            const sinal = Math.sign(conta) == 1 ? "positivo" : Math.sign(conta) == -1 ? "negativo" : "zero";
+            const inteiroDecimal = Number.isInteger(conta) ? "inteiro" : "decimal";
+
+            alert(`O resultado é ${conta.toFixed(2).replace(".", ",")}, esse número é ${parImpar}, ${sinal} e ${inteiroDecimal}.`);
+        }
+        else if (operacao === "*") {
+
+            const conta = num1 * num2;
+            const parImpar = (conta % 2) == 0 ? "par" : "ímpar";
+            const sinal = Math.sign(conta) == 1 ? "positivo" : Math.sign(conta) == -1 ? "negativo" : "zero";
+            const inteiroDecimal = Number.isInteger(conta) ? "inteiro" : "decimal";
+
+            alert(`O resultado é ${conta.toFixed(2).replace(".", ",")}, esse número é ${parImpar}, ${sinal} e ${inteiroDecimal}.`);
+        }
+        else {
+            alert(`Insira uma resposta válida!`)
+        }
+    }
+    //SAÍDA
+
+
+</script>

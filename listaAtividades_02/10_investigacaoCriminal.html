@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<script>
+  /*
+  //PROBLEMA
+  Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+  - "Telefonou para a vítima?"
+  - "Esteve no local do crime?"
+  - "Mora perto da vítima?"
+  - "Devia para a vítima?"
+  - "Já trabalhou com a vítima?"
+  O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+  */
+
+  //ENTRADA
+  alert("Olá, será feito um interrogatório com voce um sobre o crime que ocorreu semana passada, responda sim ou nao}")
+  let telefone = prompt("Você telefonou para a vítima?").trim().toLowerCase()
+  let local = prompt("Você esteve no local do crime").trim().toLowerCase()
+  let mora = prompt("Você mora perto da vítima?").trim().toLowerCase()
+  let dever = prompt("Você devia para a vítima?").trim().toLowerCase()
+  let trabalho = prompt("E você trabalha ou trabalhou com a vítima?").trim().toLowerCase()
+
+  //PROCESSAMENTO
+  let soma = 0;
+
+  if (telefone == "sim" || telefone === "s") {
+    soma ++
+  }
+  if (local === "sim" || local === "s") {
+    soma ++
+  }
+   if (mora === "sim" || mora == "s") {
+    soma ++
+  }
+   if (dever == "sim" || dever == "s") {
+    soma ++
+  }
+  if (trabalho == "sim" || trabalho == "s") {
+    soma ++
+  }
+  if (soma == 5) {
+    alert(`Você é o ASSASSINO!`)
+  }
+  else if (soma == 2) {
+    alert(`Você é suspeito!`)
+  }
+  else if (soma == 3 || soma == 4) {
+    alert(`Você é cumplice!`)
+  }
+  else if (soma == 0) {
+    alert(`Você é inocente!`)
+  }
+    //SAÍDA
+
+</script>
